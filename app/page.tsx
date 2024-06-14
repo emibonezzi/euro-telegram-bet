@@ -18,7 +18,7 @@ export default function Home() {
       })
       .then(() => setIsUserFromTelegram(true))
       .catch((err) => console.error(err));
-  }, []);
+  }, [hash]);
 
   // if user not from telegram
   if (!isUserFromTelegram) {

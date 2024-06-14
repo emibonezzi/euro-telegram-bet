@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="h-dvh flex justify-center items-center p-5">
       <h1>
-        Hey, {user?.first_name && user.usernames}. Welcome to Euro 2024 bet
+        Hey, {user?.first_name && user?.usernames}. Welcome to Euro 2024 bet
         tracker.
       </h1>
     </main>

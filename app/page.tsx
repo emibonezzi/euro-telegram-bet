@@ -2,15 +2,15 @@
 import WebApp from "@twa-dev/sdk";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useTelegramInitData from "./hooks/useTelegramInitData";
 
 export default function Home() {
   // keep track if user is from telegram
   const [isUserFromTelegram, setIsUserFromTelegram] = useState(false);
+  const { hash, user } = useTelegramInitData();
 
   // validate hash
   useEffect(() => {
-    // extract params automatically passed from Telegram
-    const hash = WebApp.initData;
     WebApp.expand();
     axios
       .post("/api/validate-hash", {
@@ -32,7 +32,9 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to Telegram Mini App</h1>
+      <h1>
+        Welcome to Telegram Mini App, {user?.first_name && user.usernames}
+      </h1>
     </main>
   );
 }

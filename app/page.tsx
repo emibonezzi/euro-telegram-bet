@@ -7,10 +7,11 @@ import useTelegramInitData from "./hooks/useTelegramInitData";
 export default function Home() {
   // keep track if user is from telegram
   const [isUserFromTelegram, setIsUserFromTelegram] = useState(false);
-  const { hash, user } = useTelegramInitData();
+  const { user } = useTelegramInitData();
 
   // validate hash
   useEffect(() => {
+    const hash = WebApp.initData;
     WebApp.expand();
     axios
       .post("/api/validate-hash", {
@@ -18,7 +19,7 @@ export default function Home() {
       })
       .then(() => setIsUserFromTelegram(true))
       .catch((err) => console.error(err));
-  }, [hash]);
+  }, []);
 
   // if user not from telegram
   if (!isUserFromTelegram) {

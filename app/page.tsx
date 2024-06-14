@@ -11,6 +11,7 @@ export default function Home() {
   useEffect(() => {
     // extract params automatically passed from Telegram
     const hash = WebApp.initData;
+    WebApp.expand();
     axios
       .post("/api/validate-hash", {
         hash: hash,

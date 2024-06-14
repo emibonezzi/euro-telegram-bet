@@ -32,8 +32,11 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to Telegram Mini App, {user?.last_name}</h1>
+    <main className="h-dvh flex justify-center items-center p-5">
+      <h1>
+        Hey, {user?.first_name && user.usernames}. Welcome to Euro 2024 bet
+        tracker.
+      </h1>
     </main>
   );
 }

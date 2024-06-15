@@ -53,7 +53,9 @@ export default function Home() {
             <p>Still no clubs? Create your own!</p>
           </Block>
           <Block>
-            <Button large={true}>Create a new club</Button>
+            <Button href="/create-club" large={true}>
+              Create a new club
+            </Button>
           </Block>
         </Page>
       </App>

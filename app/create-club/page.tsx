@@ -4,7 +4,7 @@ import React from "react";
 
 const CreateClub = () => {
   return (
-    <div className="h-dvh flex flex-col justify-center">
+    <div>
       <BlockTitle large>Create new club</BlockTitle>
       <List strongIos insetIos>
         <ListInput

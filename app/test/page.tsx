@@ -10,7 +10,7 @@ const Home = () => {
           subtitle="Challenge your friends!"
           className="top-0 sticky"
         />
-        <BlockTitle className="text-4xl">Hello, Chris! 👋 </BlockTitle>
+        <BlockTitle large>Hello, Chris! 👋 </BlockTitle>
         <Block>
           <p>
             Donec et nulla auctor massa pharetra adipiscing ut sit amet sem.

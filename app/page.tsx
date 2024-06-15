@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   return (
-    <main className="h-dvh flex justify-center items-center p-5">
+    <main>
       <App theme="ios">
         <Page>
           <Navbar
@@ -41,7 +41,7 @@ export default function Home() {
             subtitle="Challenge your friends!"
             className="top-0 sticky"
           />
-          <BlockTitle className="text-4xl">Hello, Chris! 👋 </BlockTitle>
+          <BlockTitle large>Hello, {user?.first_name}! 👋 </BlockTitle>
           <Block>
             <p>
               Donec et nulla auctor massa pharetra adipiscing ut sit amet sem.
